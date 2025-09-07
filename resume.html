@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kolakani Bunny — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a; 
+      --muted: #334155;
+      --accent: #2563eb; 
+      --rule: #e2e8f0; 
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+      line-height: 1.5; font-size: 15px;
+    }
+    .container { max-width: 960px; margin: 48px auto; padding: 0 24px; }
+    header { display: grid; gap: 8px; text-align:center; }
+    .name { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent); }
+    .contact { display: flex; flex-wrap: wrap; gap: 12px; color: var(--muted); justify-content: center; }
+    .contact a { color: var(--muted); text-decoration: none; border-bottom: 1px dashed transparent; }
+    .contact a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    hr.rule { border: 0; height: 1px; background: var(--rule); margin: 24px 0; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 2fr 1fr; } }
+    section { padding: 8px 0; }
+    h2 { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+    .item { margin-bottom: 14px; }
+    .item:last-child { margin-bottom: 0; }
+    .item h3 { margin: 0; font-size: 16px; font-weight: 600; }
+    .meta { color: var(--muted); font-size: 14px; }
+    .taglist { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 8px 0 0; }
+    .tag { padding: 4px 8px; border: 1px solid var(--rule); border-radius: 999px; font-size: 12px; }
+    ul { margin: 8px 0 0 18px; }
+    li { margin: 4px 0; }
+    footer { text-align:center; }
+    @media print {
+      body { font-size: 12px; }
+      .container { margin: 0 auto; padding: 0; }
+      a { color: inherit; text-decoration: none; }
+      .tag { border-color: #ddd; }
+      .item { break-inside: avoid; }
+      @page { margin: 14mm; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="name">Kolakani Bunny</div>
+      <div class="contact">
+        <span><strong>Email:</strong> <a href="mailto:bunnyyadav6493@gmail.com">bunnyyadav6493@gmail.com</a></span>
+        <span>•</span>
+        <span><strong>Phone:</strong> <a href="tel:+919182015803">(+91) 9182015803</a></span>
+        <span>•</span>
+        <span><strong>LinkedIn:</strong> <span>KOLAKANI BUNNY</span></span>
+      </div>
+    </header>
+    <hr class="rule" />
+
+    <div class="grid">
+      <!-- Main Column -->
+      <div>
+        <section aria-labelledby="education">
+          <h2 id="education">Education</h2>
+          <div class="item">
+            <h3>Anurag University — B.Tech in CSE-DS</h3>
+            <div class="meta">2023–2027 · CGPA: 8.84</div>
+          </div>
+          <div class="item">
+            <h3>Sri Chaitanya Junior Kalasala — Class XII</h3>
+            <div class="meta">2021–2023 · Score: 94.3%</div>
+          </div>
+          <div class="item">
+            <h3>Vivekananda Vidyapeet High School — Class X</h3>
+            <div class="meta">2021 · CGPA: 10</div>
+          </div>
+        </section>
+
+        <section aria-labelledby="projects">
+          <h2 id="projects">Projects</h2>
+          <div class="item">
+            <h3>AU BUS DIGI PAY</h3>
+            <div class="meta">HTML, CSS, JavaScript</div>
+            <ul>
+              <li>Digital bus pass & fee management system for university students.</li>
+              <li>Features include payments, bus details, seat vacancies, and user lists.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Side Column -->
+      <aside>
+        <section aria-labelledby="skills">
+          <h2 id="skills">Technical Skills</h2>
+          <div class="item">
+            <h3>Programming Languages</h3>
+            <ul class="taglist">
+              <li class="tag">Python (Basics)</li>
+              <li class="tag">Java</li>
+              <li class="tag">C</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Core Strengths</h3>
+            <ul class="taglist">
+              <li class="tag">Application Development</li>
+              <li class="tag">Problem Solving</li>
+              <li class="tag">Team Collaboration</li>
+            </ul>
+          </div>
+        </section>
+
+        <section aria-labelledby="certs">
+          <h2 id="certs">Certifications</h2>
+          <ul>
+            <li>Python — Infosys Springboard</li>
+            <li>Data Analytics Essentials — Cisco Networking Academy</li>
+            <li>Cyber Threat Management — Cisco Networking Academy</li>
+            <li>HackerRank Silver Badges — Python, C, Java</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <hr class="rule" />
+    <footer class="meta" aria-label="footer note">
+      <span>Last updated: <script>document.write(new Date().toLocaleDateString())</script></span>
+    </footer>
+  </main>
+</body>
+</html>
