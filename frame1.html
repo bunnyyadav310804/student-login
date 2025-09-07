@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Anurag Book Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- Top logo -->
+  <div class="text-center py-3 bg-white shadow-sm">
+    <img src="https://anurag.edu.in/wp-content/uploads/2021/05/anurag-university-logo.png"
+         alt="Anurag University Logo" class="img-fluid" style="max-height:90px;">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#006d77;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Anurag Book Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="login.html" target="showframe">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="registration.html" target="showframe">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogue.html" target="showframe">Catalogue</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html" target="showframe">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html" target="showframe">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel: images centered, captions BELOW the image (not overlaid) -->
+  <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bookCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#bookCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#bookCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <!-- Item 1 -->
+      <div class="carousel-item active text-center py-5">
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png"
+             alt="Simple book illustration"
+             class="d-block mx-auto img-fluid w-25" />
+        <div class="mt-3">
+          <h5 class="mb-1">Welcome Readers</h5>
+          <p class="mb-0 lead text-muted">Discover simple learning through books.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="carousel-item text-center py-5">
+        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"
+             alt="Flat library illustration"
+             class="d-block mx-auto img-fluid w-25" />
+        <div class="mt-3">
+          <h5 class="mb-1">Explore Our Library</h5>
+          <p class="mb-0 lead text-muted">Fiction, Engineering, Science & more.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="carousel-item text-center py-5">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135810.png"
+             alt="Student with books"
+             class="d-block mx-auto img-fluid w-25" />
+        <div class="mt-3">
+          <h5 class="mb-1">Grow with Knowledge</h5>
+          <p class="mb-0 lead text-muted">Books that inspire and build careers.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Iframe area -->
+  <div class="container my-4">
+    <iframe name="showframe" class="w-100 border rounded" height="600"></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Hide carousel when nav link opens a page in iframe -->
+  <script>
+    const links = document.querySelectorAll("a[target='showframe']");
+    const carousel = document.getElementById('bookCarousel');
+    links.forEach(link => link.addEventListener('click', () => carousel.classList.add('d-none')));
+  </script>
+</body>
+</html>
